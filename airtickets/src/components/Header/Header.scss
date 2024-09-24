@@ -1,0 +1,31 @@
+.header__inner {
+    padding: 44px 30px 20px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    color: rgb(78, 20, 140);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    margin-left: 34px;
+}
+
+.logo {
+    width: 100px;
+    height: 80px;
+}
+
+@media screen and (max-width:768px) {
+    .title {
+        display: none;
+    }
+
+    .wrapper {
+        justify-content: center;
+    }
+}

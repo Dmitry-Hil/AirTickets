@@ -1,0 +1,136 @@
+.sidebar {
+    width: 272px;
+    min-width: 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+}
+
+.transfers,
+.company {
+    border-radius: 10px;
+    padding: 19px 19px 50px;
+    background: rgb(232, 235, 242);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sidebar__title {
+    color: rgb(78, 20, 140);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.checkbox__wrapper {
+    display: flex;
+    margin-left: 16px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.checkbox {
+    border: 1px solid rgb(78, 20, 140);
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.checkbox[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    outline: none;
+}
+
+.checkbox[type="checkbox"]:checked {
+    background: url('/checked.svg') center / cover no-repeat;
+}
+
+.checkbox-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid rgb(78, 20, 140);
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.checkbox-radio:checked::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(78, 20, 140);
+    border-radius: 50%;
+}
+
+.checkbox__name {
+    color: rgb(133, 138, 227);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    margin-left: 19px;
+    text-transform: capitalize;
+
+}
+
+@media screen and (max-width:768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .tablet,
+    .transfers {
+        border-radius: 10px;
+        color: rgb(247, 249, 247);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        display: flex;
+        flex-direction: column;
+
+        .sidebar__title {
+            color: rgb(247, 249, 247);
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        .checkbox__wrapper {
+            margin-left: 0;
+        }
+
+        .checkbox-radio {
+            /* colors/white */
+            // background: rgb(247, 249, 247);
+            border: 1px solid rgb(247, 249, 247);
+        }
+
+        .checkbox-radio:checked::before {
+            background-color: rgb(247, 249, 247);
+        }
+
+        .checkbox__name {
+            color: rgb(247, 249, 247);
+            text-wrap: nowrap;
+        }
+
+        .checkbox {
+            border: 1px solid rgb(247, 249, 247);
+
+        }
+    }
+}
